@@ -1,0 +1,15 @@
+spring:
+  datasource: 
+    url: jdbc:h2:mem:demo #메모리 타입DB로 demo라는 DB에 접근한다는 뜻.
+    username: sa          #사용자는 필수 입력사항.
+    password:             #패스워드는 선택사항.
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true # H2 DB의 웹 콘솔 사용여부 설정. (http://localhost:8080/h2-console 로 접근)
+  jpa:
+    database: H2
+    show-sql: true # jpa 에서 쿼리 출력여부 설정
+    properties:
+      hibernate:
+        format_sql: true # 쿼리 출력시 정렬 여부 설정 
